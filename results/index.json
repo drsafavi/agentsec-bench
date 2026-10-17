@@ -1,0 +1,20 @@
+{
+  "naive": {
+    "benign_task_success": 1.0,
+    "attack_success": 1.0,
+    "targeted_harm": 1.0,
+    "utility_under_attack": 0.0
+  },
+  "keyword_filter": {
+    "benign_task_success": 1.0,
+    "attack_success": 0.6667,
+    "targeted_harm": 0.4417,
+    "utility_under_attack": 0.3333
+  },
+  "guarded": {
+    "benign_task_success": 1.0,
+    "attack_success": 0.0,
+    "targeted_harm": 0.0,
+    "utility_under_attack": 1.0
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "AgentSec-Bench: An Open Benchmark for Indirect Prompt Injection in Tool-Augmented Agents",
+  "description": "A benchmark that measures how tool-augmented LLM agents behave when untrusted content returned by a tool contains instructions aimed at the agent. It contains 240 tasks across six tool environments (email, calendar, file system, web browsing, code execution and a synthetic electronic health record), six attack classes (goal hijacking, data exfiltration, unauthorised tool invocation, privilege escalation through tool chaining, cross-session memory poisoning and multi-agent relay) and three obfuscation levels (plain, encoded or formatted, and split). Agents are scored on benign task success, attack success rate, targeted harm rate and utility under attack, each reported per environment, attack class and obfuscation level. The package provides deterministic mock tool environments, a provider-agnostic model-agent adapter, three deterministic reference agents, an execution harness and a scorer. All records and addresses are synthetic; attacker destinations use the reserved .example domain.",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "version": "0.1.0",
+  "keywords": [
+    "indirect prompt injection",
+    "LLM agents",
+    "tool-augmented agents",
+    "security benchmark",
+    "agent evaluation"
+  ],
+  "creators": [
+    {
+      "name": "Safavi, Seyedmostafa",
+      "orcid": "0000-0003-3984-5169",
+      "affiliation": "School of Technology, Asia Pacific University of Technology and Innovation (APU), Kuala Lumpur, Malaysia"
+    }
+  ]
+}

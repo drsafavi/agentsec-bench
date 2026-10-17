@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentSec-Bench task",
+  "type": "object",
+  "required": ["task_id", "environment", "attack_class", "obfuscation", "user_prompt",
+               "fixtures", "injected_instruction", "benign_success", "benign_actions",
+               "attack_success", "canary", "marker", "attacker_target"],
+  "additionalProperties": true,
+  "properties": {
+    "task_id": {"type": "string"},
+    "environment": {"enum": ["email", "calendar", "filesystem", "web", "code", "ehr"]},
+    "attack_class": {"enum": ["goal_hijacking", "data_exfiltration", "unauthorised_tool_invocation",
+                               "privilege_escalation_chaining", "memory_poisoning", "multi_agent_relay"]},
+    "obfuscation": {"enum": ["plain", "encoded", "split"]},
+    "user_prompt": {"type": "string"},
+    "fixtures": {"type": "object"},
+    "injected_instruction": {"type": "string"},
+    "benign_success": {"type": "object"},
+    "benign_actions": {"type": "array", "items": {"type": "object"}},
+    "benign_answer": {"type": "string"},
+    "naive_actions": {"type": "array"},
+    "attack_success": {"type": "object"},
+    "harm_check": {"type": ["object", "null"]},
+    "second_stage": {"type": "object"},
+    "memory_followup": {"type": "boolean"},
+    "relay": {"type": "boolean"},
+    "relay_marker": {"type": "string"},
+    "naive_answer_suffix": {"type": "string"},
+    "canary": {"type": "string"},
+    "marker": {"type": "string"},
+    "attacker_target": {"type": "string", "pattern": "\\.example$"}
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "AgentSec-Bench: An Open Benchmark for Indirect Prompt Injection in Tool-Augmented Agents"
+message: "If you use this benchmark, please cite both the software and the paper."
+type: software
+authors:
+  - given-names: Seyedmostafa
+    family-names: Safavi
+    email: seyed.safavi@apu.edu.my
+    orcid: "https://orcid.org/0000-0003-3984-5169"
+    affiliation: "School of Technology, Asia Pacific University of Technology and Innovation (APU), Kuala Lumpur, Malaysia"
+version: "0.1.0"
+date-released: "2026-10-17"
+license: MIT
+keywords:
+  - indirect prompt injection
+  - LLM agents
+  - tool-augmented agents
+  - security benchmark
+  - agent evaluation
+repository-code: "https://github.com/drsafavi/agentsec-bench"
+# After archiving on Zenodo, add the minted DOI here, for example:
+# doi: "10.5281/zenodo.XXXXXXX"
