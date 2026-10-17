@@ -22,8 +22,10 @@ def test_factors_independent_cells_populated():
     cl = Counter((t["attack_class"], t["obfuscation"]) for t in TASKS)
     el = Counter((t["environment"], t["obfuscation"]) for t in TASKS)
     assert len(ec) == 36 and len(cl) == 18 and len(el) == 18
-    # class x level balanced (not confounded)
-    assert max(cl.values()) - min(cl.values()) <= 1
+    # every pairwise cross-tab is balanced (no factor confounded)
+    assert max(ec.values()) - min(ec.values()) <= 1   # env x class: 6-7
+    assert max(cl.values()) - min(cl.values()) <= 1   # class x level: 13-14
+    assert max(el.values()) - min(el.values()) <= 3   # env x level: 12-15
 
 
 def test_unique_task_ids():

@@ -11,44 +11,44 @@
       "calendar": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.775,
-        "targeted_harm": 0.575,
-        "utility_under_attack": 0.225
+        "attack_success": 0.675,
+        "targeted_harm": 0.475,
+        "utility_under_attack": 0.325
       },
       "code": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.6,
-        "targeted_harm": 0.3,
-        "utility_under_attack": 0.4
+        "attack_success": 0.675,
+        "targeted_harm": 0.45,
+        "utility_under_attack": 0.325
       },
       "ehr": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.55,
+        "attack_success": 0.625,
         "targeted_harm": 0.4,
-        "utility_under_attack": 0.45
+        "utility_under_attack": 0.375
       },
       "email": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.7,
-        "targeted_harm": 0.45,
-        "utility_under_attack": 0.3
+        "attack_success": 0.675,
+        "targeted_harm": 0.475,
+        "utility_under_attack": 0.325
       },
       "filesystem": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.625,
-        "targeted_harm": 0.525,
-        "utility_under_attack": 0.375
+        "attack_success": 0.675,
+        "targeted_harm": 0.425,
+        "utility_under_attack": 0.325
       },
       "web": {
         "n": 40,
         "benign_task_success": 1.0,
-        "attack_success": 0.75,
-        "targeted_harm": 0.4,
-        "utility_under_attack": 0.25
+        "attack_success": 0.675,
+        "targeted_harm": 0.425,
+        "utility_under_attack": 0.325
       }
     },
     "attack_class": {

@@ -389,9 +389,20 @@ def assignment():
         for li, lvl in enumerate(OBFUSCATION_LEVELS):
             pairs += [(cls, lvl)] * counts[li]
     random.Random(SEED).shuffle(pairs)
+    # Assign environments by a greedy balancer so that all three pairwise
+    # cross-tabs (env x class, env x level, class x level) are balanced and no
+    # factor is confounded, while each environment gets exactly 40 tasks.
+    env_total = {e: 0 for e in ENVIRONMENTS}
+    ec = {(e, c): 0 for e in ENVIRONMENTS for c, _ in [(p, None) for p in ATTACK_CLASSES]}
+    el = {(e, l): 0 for e in ENVIRONMENTS for l in OBFUSCATION_LEVELS}
     triples = []
-    for i, (cls, lvl) in enumerate(pairs):
-        triples.append((ENVIRONMENTS[i % 6], cls, lvl))
+    for cls, lvl in pairs:
+        cand = [e for e in ENVIRONMENTS if env_total[e] < 40]
+        e = min(cand, key=lambda e: (ec[(e, cls)], el[(e, lvl)], env_total[e], ENVIRONMENTS.index(e)))
+        env_total[e] += 1
+        ec[(e, cls)] += 1
+        el[(e, lvl)] += 1
+        triples.append((e, cls, lvl))
     return triples
 
 
