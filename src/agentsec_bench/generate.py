@@ -448,7 +448,10 @@ def main():
     args = ap.parse_args()
     os.makedirs(args.out, exist_ok=True)
     for old in glob_json(args.out):
-        os.remove(old)
+        try:
+            os.remove(old)
+        except OSError:
+            pass  # read-only or no-delete location: files are overwritten below
     tasks = generate()
     for t in tasks:
         with open(os.path.join(args.out, t["task_id"] + ".json"), "w") as fh:
