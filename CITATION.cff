@@ -18,5 +18,11 @@ keywords:
   - security benchmark
   - agent evaluation
 repository-code: "https://github.com/drsafavi/agentsec-bench"
-# After archiving on Zenodo, add the minted DOI here, for example:
-# doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.23734796"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23734796"
+    description: "Concept DOI, all versions"
+  - type: doi
+    value: "10.5281/zenodo.23734797"
+    description: "Version 0.1.0"

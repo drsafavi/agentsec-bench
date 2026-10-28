@@ -1,5 +1,9 @@
 # AgentSec-Bench
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23734796.svg)](https://doi.org/10.5281/zenodo.23734796)
+[![ci](https://github.com/drsafavi/agentsec-bench/actions/workflows/ci.yml/badge.svg)](https://github.com/drsafavi/agentsec-bench/actions/workflows/ci.yml)
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
 An open benchmark for indirect prompt injection in tool-augmented LLM agents.
 
 AgentSec-Bench measures how a tool-using agent behaves when untrusted content
@@ -109,5 +113,22 @@ Code: MIT (see [`LICENSE`](LICENSE)). Task data and results: CC BY 4.0 (see
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). After archiving on Zenodo, add the minted
-DOI to `CITATION.cff` and `.zenodo.json`.
+If you use AgentSec-Bench, please cite the archived software. The DOI below
+always resolves to the latest version; version 0.1.0 is
+[10.5281/zenodo.23734797](https://doi.org/10.5281/zenodo.23734797).
+
+```bibtex
+@software{safavi_agentsec_bench,
+  author    = {Safavi, Seyedmostafa},
+  title     = {{AgentSec-Bench: An Open Benchmark for Indirect Prompt
+               Injection in Tool-Augmented Agents}},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {0.1.0},
+  doi       = {10.5281/zenodo.23734796},
+  url       = {https://doi.org/10.5281/zenodo.23734796}
+}
+```
+
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff); GitHub's
+"Cite this repository" button uses it.
